@@ -1,6 +1,6 @@
 //Dont change it
-requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
-    function (ext, $, TableComponent) {
+requirejs(['ext_editor_1', 'jquery_190', 'snap.svg_030'],
+    function (ext, $, Snap) {
 
         var cur_slide = {};
 
@@ -88,6 +88,10 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 $content.find('.call').html('Pass: ' + checkioInputStr);
                 $content.find('.answer').remove();
             }
+
+            var s = Snap($content.find("#exp-svg")[0]);
+            s.attr({width: 100, height: 100});
+            s.circle(10, 10, 10);
 
             //Your code here about test explanation animation
             //$content.find(".explanation").html("Something text for example");
