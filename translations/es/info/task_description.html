@@ -1,0 +1,39 @@
+<style type="text/css">p.quote-source {
+        float: right;
+        font-size: 10px;
+    }
+</style>
+<div class="story"><!--<img src="{{MEDIA}}220px-Monkey-typing.jpg"--><!--style="float: left; margin: 10px;">-->
+<p>En una carrera, el corredor m&aacute;s r&aacute;pido nunca podr&aacute; superar al m&aacute;s lento, ya que debe llegar primero al punto donde el corredor m&aacute;s lento comenz&oacute;, y por lo tanto, el corredor m&aacute;s lento siempre mantendr&aacute; el liderazgo.</p>
+
+<p class="quote-source">&ndash; Como fue narrado por Arist&oacute;teles, F&iacute;sica VI: 9, 239b15</p>
+
+<div style="clear: right;">&nbsp;</div>
+</div>
+
+<p>&quot;Aquiles y la tortuga&quot; es una de las famosas <a href="http://en.wikipedia.org/wiki/Zeno%27s_paradoxes">paradojas de Zen&oacute;n</a>. Nikola quiere comprobar la validez de la paradoja y construy&oacute; dos robots para este prop&oacute;sito: Achilleborg (A1 - prototipo r&aacute;pido y &aacute;gil) y Tortoimenator (T2 - cyborg pesado y lento).</p>
+
+<p>A1 es m&aacute;s r&aacute;pido que T2, por lo que este &uacute;ltimo empieza con una ventaja de <strong>X</strong> segundos con respecto a A2. Durante <strong>X</strong> segundos T2 se mover&aacute; a <strong>velocidad_t2*X</strong> metros. A1 debe primero llegar al punto de donde T2 ya lleg&oacute;, pero considerando que T2 sigue en movimiento, A1 deber&aacute; entonces alcanzar el siguiente punto por el que ya paso T2 y as&iacute; hasta el <a href="http://en.wikipedia.org/wiki/Infinity">infinito</a>. La paradoja es correcta en teor&iacute;a, pero en la pr&aacute;ctica A1 sobrepasa f&aacute;cilmente T2. Hmm ... quiz&aacute;s podemos calcular cuando A1 alcanzara a T2.</p>
+
+<p style="text-align: center;"><img alt="A1-T2" class="for_info_only" src="{{MEDIA}}A1-T2.png" title="A1-T2" width="390px" /> <img alt="A1-T2" class="for_editor_only" src="{{MEDIA}}A1-T2.png" title="A1-T2" width="380px" /></p>
+
+<p>Se indican las velocidades de A1 y T2 en m / s, as&iacute; como la ventaja que tiene T2 en segundos. Trata de contar el tiempo que demora A1 en alcanzar T2 (comenzando desde el momento que arranca T2). El resultado deber&aacute; ser dado en segundos con una precisi&oacute;n &plusmn;10<sup>-8</sup>.</p>
+
+<p><strong>Datos de Entrada: </strong> Tres argumentos. Velocidades de A1 y T2 y la ventaja, como enteros (int).</p>
+
+<p><strong>Salida: </strong> El tiempo que A1 emplea en alcanzar a T2 (comenzando desde el momento que arranca T2) como un entero (int) o decimal (float).</p>
+
+<div class="for_info_only">
+<p><strong>Ejemplo:</strong></p>
+
+<pre class="brush: python">
+chase(6, 3, 2) == 4
+chase(10, 1, 10) == 11.11111111
+    </pre>
+</div>
+
+<p class="for_info_only"><strong>&iquest;C&oacute;mo se usa?: </strong> Regresemos a la escuela y recordemos nuestros principios b&aacute;sicos de matem&aacute;ticas. A veces, la simple aritm&eacute;tica nos permite resolver f&aacute;cilmente problemas dif&iacute;ciles de paradojas.</p>
+
+<p><strong>Condiciones:</strong><br />
+velocidad_t2 &lt; velocidad_a1 &lt; 343<br />
+0 &lt; ventaja &le; 60</p>
