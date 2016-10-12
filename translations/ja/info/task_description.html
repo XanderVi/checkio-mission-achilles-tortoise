@@ -1,0 +1,83 @@
+﻿<style>
+    p.quote-source {
+        float: right;
+        font-size: 10px;
+    }
+</style>
+
+<div class="story">
+    <!--<img src="{{MEDIA}}220px-Monkey-typing.jpg"-->
+    <!--style="float: left; margin: 10px;">-->
+
+    <p>
+        競争において最速の走者でさえ最遅の走者を永遠に追い越せない。
+        なぜなら追いかけ始めてそこに至る頃には
+        先行していた走者は常にその先を行っているからである。
+    </p>
+
+    <p class="quote-source">
+         – アリストテレス「自然学」VI:9, 239b15 より
+    </p>
+
+    <div style="clear: right;"></div>
+</div>
+
+<p>
+    「アキレスと亀」は有名な
+    <a href="https://ja.wikipedia.org/wiki/%E3%82%BC%E3%83%8E%E3%83%B3%E3%81%AE%E3%83%91%E3%83%A9%E3%83%89%E3%83%83%E3%82%AF%E3%82%B9">「ゼノンのパラドックス」</a>の一つである。
+    ニコラはこのパラドックスの検証をしたいと考え、2体のロボットを作製した。
+    アキレボーグ(「Achilleborg」 A1 - 速く俊敏な試作品) と
+    トータミネーター(「Tortoimenator」 T2 -- 重くて遅いサイボーグ) である。
+</p>
+
+<p>
+    A1は T2よりも速い。だから T2は<strong>X</strong>秒だけ A1より先にスタートする。
+    <strong>X</strong> 秒の間に T2は <strong>t2_speed*X</strong> メートル進む。
+    つまり A1は T2がいた場所に到達したころには
+    T2は既に次の地点に移動しており、それは次の試みでも同様の結果となる。これが <a href="https://ja.wikipedia.org/wiki/%E7%84%A1%E9%99%90">無限(infinity)</a>に続く。
+    このパラドックスは理論上は正しい。
+    しかし実際には A1は容易に T2を追い越す。うむ…我々は A1が T2に追いつく瞬間を計算できるかもしれない。
+</p>
+
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="A1-T2" src="{{MEDIA}}A1-T2.png" alt="A1-T2" width="390px"/>
+    <img class="for_editor_only" title="A1-T2" src="{{MEDIA}}A1-T2.png" alt="A1-T2" width="380px"/>
+</p>
+
+<p>
+    あなたには A1と T2の速度(メートル/秒)と同じ形式(integer型)で T2のアドバンテージが秒数で与えられる。
+    A1と T2が横並びになるまでの時間を計測しよう。(T2のスタート時点から計測する)
+    解答は小数点以下8桁の精度(with precious&plusmn;10<sup>-8</sup>)の秒数で表すこと。
+</p>
+<p>
+    <strong>入力: </strong> 引数は3つ。A1とT2の速度とT2のアドバンテージ。(integer型)
+</p>
+
+<p>
+    <strong>出力: </strong> A1がT2に追いつくまでの時間(T2のスタート時点から計測する) (integer型またはfloat型)
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>例:</strong>
+    </p>
+    <pre class="brush: python">
+chase(6, 3, 2) == 4
+chase(10, 1, 10) == 11.11111111
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+    学生時代に戻って学校で学んだ数学の基礎を思い出そう。
+    しばしば簡単な算数で複雑なパラドックスを容易に解けることがある。
+</p>
+
+<p>
+    <strong>事前条件:</strong><br>
+    t2_speed &lt; a1_speed &lt; 343<br>
+    0 &lt; advantage &le; 60
+</p>
