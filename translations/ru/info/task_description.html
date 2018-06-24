@@ -41,10 +41,9 @@
 </p>
 
 
-<p style="text-align: center;">
-    <img class="for_info_only" title="A1-T2" src="{{MEDIA}}A1-T2.png" alt="A1-T2" width="390px"/>
-    <img class="for_editor_only" title="A1-T2" src="{{MEDIA}}A1-T2.png" alt="A1-T2" width="380px"/>
-</p>
+<div class="for_info_only" style="text-align: center;">
+    <img title="A1-T2" src="{{MEDIA}}A1-T2.png" alt="A1-T2" width="390px"/>
+</div>
 
 <p>
     Даны скорости A1 и T2 в м/с, а ткаже преимущество T2 в секундах.
@@ -67,10 +66,15 @@
     <p>
         <strong>Примеры:</strong>
     </p>
-    <pre class="brush: python">
-chase(6, 3, 2) == 4
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">chase(6, 3, 2) == 4
 chase(10, 1, 10) == 11.11111111
-    </pre>
+</pre>
+{% else %}
+<pre class="brush: python">chase(6, 3, 2) == 4
+chase(10, 1, 10) == 11.11111111
+</pre>
+{% endif %}
 </div>
 
 <p class="for_info_only">

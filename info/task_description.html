@@ -6,9 +6,6 @@
 </style>
 
 <div class="story">
-    <!--<img src="{{MEDIA}}220px-Monkey-typing.jpg"-->
-    <!--style="float: left; margin: 10px;">-->
-
     <p>
         In a race, the quickest runner can never overtake the slowest,
         since the pursuer must first reach the point whence the pursued started,
@@ -39,10 +36,9 @@
 </p>
 
 
-<p style="text-align: center;">
-    <img class="for_info_only" title="A1-T2" src="{{MEDIA}}A1-T2.png" alt="A1-T2" width="390px"/>
-    <img class="for_editor_only" title="A1-T2" src="{{MEDIA}}A1-T2.png" alt="A1-T2" width="380px"/>
-</p>
+<div class="for_info_only" style="text-align: center;">
+    <img title="A1-T2" src="{{MEDIA}}A1-T2.png" alt="A1-T2" width="390px"/>
+</div>
 
 <p>
     You are given A1 and T2’s speed in m/s as well as the length of the advantage T2 has in seconds.
@@ -57,16 +53,19 @@
     <strong>Output: </strong> The time when A1 catch up T2 (count from T2 start) as an integer or float.
 </p>
 
-
-
 <div class="for_info_only">
-    <p>
-        <strong>Example:</strong>
-    </p>
-    <pre class="brush: python">
-chase(6, 3, 2) == 4
+<p>
+<strong>Example:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">chase(6, 3, 2) == 4
 chase(10, 1, 10) == 11.11111111
-    </pre>
+</pre>
+{% else %}
+<pre class="brush: python">chase(6, 3, 2) == 4
+chase(10, 1, 10) == 11.11111111
+</pre>
+{% endif %}
 </div>
 
 <p class="for_info_only">
