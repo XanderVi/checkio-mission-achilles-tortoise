@@ -13,10 +13,13 @@ if (!global.is_checking) {
     // These "asserts" using only for self-checking and not necessary for auto-testing
     function almost_equal(checked, correct, significantDigits) {
         var precision = 0.1 ** significantDigits;
-        return correct - precision < checked < correct + precision;
+        return correct - precision < checked && checked < correct + precision;
 	}
 
-    assert.equal(almost_equal(chase(6, 3, 2), 4, 8), true);
-    assert.equal(almost_equal(chase(10, 1, 10), 11.111111111, 8), true);
+    var first_test = almost_equal(chase(6, 3, 2), 4, 8)
+    var second_test = almost_equal(chase(10, 1, 10), 11.111111111, 8)
+
+    assert.equal(first_test, true);
+    assert.equal(second_test, true);
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }
