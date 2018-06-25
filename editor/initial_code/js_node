@@ -16,7 +16,7 @@ if (!global.is_checking) {
         return correct - precision < checked < correct + precision;
 	}
 
-    assert.equal(almost_equal(chase(6, 3, 2), 4, 8), true));
+    assert.equal(almost_equal(chase(6, 3, 2), 4, 8), true);
     assert.equal(almost_equal(chase(10, 1, 10), 11.111111111, 8), true);
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }
